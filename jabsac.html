@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Dirt Jumps in Calgary</title>
+    <style>
+        body {
+            font-family: 'DM Serif Text';
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            padding: 20px;
+        }
+        .header img {
+            width: 150px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .form-container {
+            margin: 20px auto;
+            max-width: 640px;
+        }
+        .about {
+            padding: 20px;
+            background-color: white;
+        }
+        .contact {
+            padding: 20px;
+            background-color: white;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact-form textarea {
+            height: 150px; /* Larger space for the message */
+        }
+        .contact-form input[type="submit"] {
+            background-color: #808080; /* Grey color */
+            color: black; /* Black lettering */
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #696969; /* Darker grey on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Jump & Bike Skills Association of Calgary">
+        <h1 style="margin: 0;">Support Dirt Jumps</h1>
+        <h1 style="margin: 0;">in Calgary</h1>
+    </div>
+
+    <div class="content">
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScm6NnszEwqPOyamvkhm0RqIZVy-cJzD-5jUUKbk4EcrlZq-w/viewform?embedded=true" width="640" height="690" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+
+        <div class="about">
+            <h2>About</h2>
+            <p>Dirt jumps are awesome, we need them for everyone in public spaces in Calgary.</p>
+            <p>The Jump and Bike Skills Association of Calgary (JABSAC) is established as a non-profit society to promote and advocate for the development, maintenance, and sustainability of dirt jumps and bike skills features in publicly accessible spaces in Calgary.</p>
+        </div>
+
+        <!-- Contact Us button -->
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or suggestions? We'd love to hear from you!</p>
+            <button id="contactBtn" style="background-color: #808080; color: black; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">Contact Us</button>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <form action="mailto:info@jabsac.com" method="post" enctype="multipart/form-data" class="contact-form">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message" placeholder="Write your message here" required></textarea><br>
+
+                <label for="file">Attach a File (optional):</label><br>
+                <input type="file" id="file" name="file"><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("contactModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("contactBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+<p>&copy; 2024 Jump & Bike Skills Association of Calgary (JABSAC). All rights reserved.</p>
+    </div>
+</body>
+</html> 
