@@ -4,125 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support Dirt Jumps in Calgary</title>
-<style>
-    body {
-        font-family: 'DM Serif Text', serif;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    .header {
-        padding: 20px;
-        text-align: center;
-    }
-    .header img {
-        display: block;
-        margin: 0 auto;
-        width: 180px; 
-    }
-    .header h1 {
-        font-size: 2em; 
-        margin: 10px 0 0 0;
-    }
-    .content {
-        padding: 20px;
-        max-width: 800px;
-        margin: auto;
-    }
-    .form-container {
-        margin: 20px auto;
-        width: 100%;
-        max-width: 600px;
-    }
-    .about, .contact {
-        padding: 20px;
-        background-color: white;
-        max-width: 800px;
-        margin: auto;
-        text-align: center;
-    }
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-    }
-    .modal-content {
-        background-color: #fff;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 90%;
-        max-width: 400px;
-        border-radius: 10px;
-    }
-    .contact-form input, .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-    .contact-form textarea {
-        height: 150px;
-    }
-    .contact-form input[type="submit"] {
-        background-color: #808080;
-        color: black;
-        border: none;
-        cursor: pointer;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 5px;
-    }
-    .contact-form input[type="submit"]:hover {
-        background-color: #696969;
-    }
-    @media (max-width: 600px) {
+    <style>
+        body {
+            font-family: 'DM Serif Text', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            padding: 20px;
+            text-align: center;
+        }
         .header img {
-            width: 200px; /* Larger mobile size */
-            margin-bottom: 15px;
+            display: block;
+            margin: 0 auto;
+            width: 180px; 
         }
         .header h1 {
-            font-size: 2.5em; /* Larger mobile size */
+            font-size: 2em; 
+            margin: 10px 0 0 0;
         }
-        .content, .about, .contact {
-            padding: 15px;
+        /* Add a small gap between "Support Dirt Jumps..." and "February 2025..." */
+        .header .non-link {
+            font-family: 'DM Serif Text', serif;
+            font-size: 2em; /* Same size as h1 */
+            color: black; /* Black color */
+            margin-top: 20px; /* Add a small gap (adjust the value as needed) */
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+        /* Style for the link (dark brown and underlined) */
+        .header a {
+            font-family: 'DM Serif Text', serif;
+            font-size: 2em; /* Same size as h1 */
+            text-decoration: underline; /* Add underline */
+            color: #5A3D2B; /* Dark brown color */
+            display: inline-block;
+            margin-top: 0; /* Remove top margin to close the gap */
+        }
+        .header a:hover {
+            color: #3A2B1F; /* Darker shade for hover effect */
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .form-container {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+        }
+        .about, .contact {
+            padding: 20px;
+            background-color: white;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
             width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
         }
-    }
-</style>
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact-form textarea {
+            height: 150px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #808080;
+            color: black;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #696969;
+        }
+        @media (max-width: 600px) {
+            .header img {
+                width: 200px;
+                margin-bottom: 15px;
+            }
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .content, .about, .contact {
+                padding: 15px;
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="header">
         <img src="logo.png" alt="Jump & Bike Skills Association of Calgary">
         <h1 style="margin: 0;">Support Dirt Jumps</h1>
         <h1 style="margin: 0;">in Calgary</h1>
+        
+        <!-- Non-link text for "February 2025 JABSAC Report" -->
+        <p class="non-link">
+            February 2025 JABSAC Report
+        </p>
+        
+        <!-- Link for "From the Ground Up: Building Public Dirt Jumps in Calgary" -->
+        <p>
+            <a href="https://jabsac.com/jabsac-from-the-ground-up.pdf" target="_blank">
+                From the Ground Up: Building Public Dirt Jumps in Calgary
+            </a>
+        </p>
+
+        <!-- Adding the image below the link -->
+        <img src="https://github.com/matt-forallepsilon/matt-forallepsilon.github.io/blob/1006eb90d9b4677d5dd98e582fb4bff59235f35c/jabsac-illustration.jpg?raw=true" alt="JABSAC Illustration" width="800px">
     </div>
 
-        <div class="about">
-            <h2>About</h2>
-            <p>Dirt jumps are awesome, we need them for everyone in public spaces in Calgary.</p>
-            <p>The Jump and Bike Skills Association of Calgary (JABSAC) is established as a non-profit society to promote and advocate for the development, maintenance, and sustainability of dirt jumps and bike skills features in publicly accessible spaces in Calgary.</p>
-        </div>
-    
+    <div class="about">
+        <h2>About</h2>
+        <p>Dirt jumps are awesome, we need them for everyone in public spaces in Calgary.</p>
+        <p>The Jump and Bike Skills Association of Calgary (JABSAC) is established as a non-profit society to promote and advocate for the development, maintenance, and sustainability of dirt jumps and bike skills features in publicly accessible spaces in Calgary.</p>
+    </div>
+
     <div class="content">
         <div class="form-container">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScm6NnszEwqPOyamvkhm0RqIZVy-cJzD-5jUUKbk4EcrlZq-w/viewform?embedded=true" width="400" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
         
-    <div class="survey">
-        <h2><strong>Survey</strong></h2>
-        <p>To help with planning, please tell us a bit about yourself and your riding.</p>
-        <a href="https://forms.gle/vQgWQf3xBNh6Cmq8A" target="_blank">
-            <button style="background-color: #808080; color: lightgrey; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">Survey</button>
-        </a>
-    </div>
+        <div class="survey">
+            <h2><strong>Survey</strong></h2>
+            <p>To help with planning, please tell us a bit about yourself and your riding.</p>
+            <a href="https://forms.gle/vQgWQf3xBNh6Cmq8A" target="_blank">
+                <button style="background-color: #808080; color: lightgrey; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer;">Survey</button>
+            </a>
+        </div>
                 
         <!-- Contact Us button -->
         <div class="contact">
@@ -182,7 +217,7 @@
             }
         }
     </script>
-<p>&copy; 2024 Jump & Bike Skills Association of Calgary (JABSAC). All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Jump & Bike Skills Association of Calgary (JABSAC). All rights reserved.</p>
 </body>
-</html> 
+</html>
+
